@@ -1,0 +1,102 @@
+/* calculator.css */
+
+/* General styles for a modern dark theme with a gradient background */
+.calculator {
+    width: 320px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2c3e50, #34495e, #5f6368);
+    color: #ecf0f1;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+
+  /* Gradient background */
+  body {
+    background: linear-gradient(135deg, #2c3e50, #34495e, #5f6368);
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ecf0f1;
+  }
+
+  /* Grid for buttons */
+  .buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  /* Button styles */
+  button {
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  /* Arithmetic buttons */
+  button.arithmetic {
+    background-color: #f39c12;  /* Pastel yellow */
+    color: #fff;
+  }
+
+  button.arithmetic:hover {
+    background-color: #f1c40f;  /* Lighter pastel yellow */
+  }
+
+  /* Scientific function buttons */
+  button.scientific {
+    background-color: #8e44ad;  /* Pastel purple */
+    color: #fff;
+  }
+
+  button.scientific:hover {
+    background-color: #9b59b6;  /* Lighter pastel purple */
+  }
+
+  /* Clear button */
+  button.clear {
+    background-color: #e74c3c;  /* Pastel red */
+    color: #fff;
+  }
+
+  button.clear:hover {
+    background-color: #c0392b;  /* Lighter pastel red */
+  }
+
+  /* Equals button */
+  button.equals {
+    background-color: #1abc9c;  /* Pastel teal */
+    color: #fff;
+  }
+
+  button.equals:hover {
+    background-color: #16a085;  /* Lighter pastel teal */
+  }
+
+  /* Number and operator buttons */
+  button:active {
+    transform: scale(0.98);
+  }
+
+  /* Style for the display */
+  .display {
+    padding: 20px;
+    font-size: 28px;
+    color: #fff;
+    background-color: #34495e;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
+

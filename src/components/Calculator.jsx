@@ -1,7 +1,9 @@
+ /* Calculator.jsx */
+
 import React, { useState } from "react";
 import Display from "./Display";
 import Buttons from "./Buttons";
-
+import "./styles/calculator.css";
 
 const Calculator = () => {
   const [expression, setExpression] = useState("");
@@ -18,14 +20,21 @@ const Calculator = () => {
 
   const calculateResult = () => {
     try {
-        const sanitizedExpression = expression
+      const sanitizedExpression = expression
         .replace(/√/g, "Math.sqrt")
         .replace(/\^/g, "Math.pow")
         .replace(/log/g, "Math.log")
         .replace(/sin/g, "Math.sin")
         .replace(/cos/g, "Math.cos")
-        .replace(/tan/g, "Math.tan")
-      setResult(eval(expression));
+        .replace(/tan/g, "Math.tan");
+
+        // Check for division by zero before evaluation
+        if (sanitizedExpression.includes("/0")) {
+            setResult("cannot devide by zero");
+            return;
+        }
+
+      setResult(eval(sanitizedExpression)); // Ensure proper input validation in future
     } catch (error) {
       setResult("Error");
     }
