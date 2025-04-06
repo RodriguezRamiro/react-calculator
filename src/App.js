@@ -6,7 +6,7 @@ import Calculator from "./components/Calculator";
 function App() {
   return (
     <div className="App">
-      <h1>React Calculator</h1>
+      <h1 className="title">React Calculator</h1>
       <Calculator />
     </div>
   );

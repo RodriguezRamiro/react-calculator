@@ -13,7 +13,7 @@
     font-family: 'Arial', sans-serif;
   }
 
-  /* Gradient background */
+  /* Gradient background for body */
   body {
     background: linear-gradient(135deg, #2c3e50, #34495e, #5f6368);
     font-family: 'Arial', sans-serif;
@@ -24,6 +24,32 @@
     align-items: center;
     color: #ecf0f1;
   }
+
+  /* Title with magenta-purple gradient */
+  .title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background: linear-gradient(45deg, #4502ee, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  /* Subtle glowing animation */
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 4px #ff00ff, 0 0 8px #4502ee;
+    }
+    50% {
+      text-shadow: 0 0 8px #4502ee, 0 0 16px #4502ee;
+    }
+    100% {
+      text-shadow: 0 0 4px #ff00ff, 0 0 8px #4502ee;
+    }
+  }
+
 
   /* Grid for buttons */
   .buttons-grid {
@@ -45,45 +71,45 @@
 
   /* Arithmetic buttons */
   button.arithmetic {
-    background-color: #f39c12;  /* Pastel yellow */
+    background-color: #f39c12; /* Pastel yellow */
     color: #fff;
   }
 
   button.arithmetic:hover {
-    background-color: #f1c40f;  /* Lighter pastel yellow */
+    background-color: #f1c40f; /* Lighter pastel yellow */
   }
 
   /* Scientific function buttons */
   button.scientific {
-    background-color: #8e44ad;  /* Pastel purple */
+    background-color: #8e44ad; /* Pastel purple */
     color: #fff;
   }
 
   button.scientific:hover {
-    background-color: #9b59b6;  /* Lighter pastel purple */
+    background-color: #9b59b6; /* Lighter pastel purple */
   }
 
   /* Clear button */
   button.clear {
-    background-color: #e74c3c;  /* Pastel red */
+    background-color: #e74c3c; /* Pastel red */
     color: #fff;
   }
 
   button.clear:hover {
-    background-color: #c0392b;  /* Lighter pastel red */
+    background-color: #c0392b; /* Lighter pastel red */
   }
 
   /* Equals button */
   button.equals {
-    background-color: #1abc9c;  /* Pastel teal */
+    background-color: #1abc9c; /* Pastel teal */
     color: #fff;
   }
 
   button.equals:hover {
-    background-color: #16a085;  /* Lighter pastel teal */
+    background-color: #16a085; /* Lighter pastel teal */
   }
 
-  /* Number and operator buttons */
+  /* Button press effect */
   button:active {
     transform: scale(0.98);
   }
@@ -99,4 +125,3 @@
     word-wrap: break-word;
     white-space: pre-wrap;
   }
-
